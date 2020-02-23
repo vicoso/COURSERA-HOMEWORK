@@ -1,0 +1,38 @@
+a, b, c = int(input()), int(input()), int(input())
+d, e, f = int(input()), int(input()), int(input())
+if a >= b >= c:
+    (a, b, c) = (c, b, a)
+elif b >= a >= c:
+    (a, b, c) = (c, a, b)
+elif b >= c >= a:
+    (b, c) = (c, b)
+elif a >= c >= b:
+    (a, b, c) = (b, c, a)
+elif c >= a >= b:
+    (b, a) = (a, b)
+else:
+    (a, b, c) = (a, b, c)
+if d >= e >= f:
+    (d, e, f) = (f, e, d)
+elif e >= d >= f:
+    (d, e, f) = (f, d, e)
+elif e >= f >= d:
+    (e, f) = (f, e)
+elif d >= f >= e:
+    (d, e, f) = (e, f, d)
+elif f >= d >= e:
+    (e, d) = (d, e)
+else:
+    (d, e, f) = (d, e, f)
+if a <= d and b <= e and c <= f:
+    if a == d and b == e and c == f:
+        print("Boxes are equal")
+    else:
+        print("The first box is smaller than the second one")
+elif d <= a and b >= e and c >= f:
+    if a == d and b == e and c == f:
+        print("Boxes are equal")
+    else:
+        print("The first box is larger than the second one")
+else:
+    print("Boxes are incomparable")
