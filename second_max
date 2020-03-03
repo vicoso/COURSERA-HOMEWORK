@@ -1,0 +1,11 @@
+a = int(input())
+aMax = a
+aSecond = 0
+while a != 0:
+    a = int(input())
+    if aMax < a:
+        aSecond = aMax
+        aMax = a
+    elif aMax >= a > aSecond:
+        aSecond = a
+print(aSecond)
