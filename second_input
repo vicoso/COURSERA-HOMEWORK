@@ -1,0 +1,15 @@
+s = input()
+firstF = s.find("f")
+s_revers = s[::-1]
+prev_last_f = s_revers.find("f")
+lastF = len(s) - 1 - prev_last_f
+s_1 = s[:firstF]
+s_2 = s[firstF + 1:]
+itog = s_1 + s_2
+if firstF == lastF:
+    print("-1")
+elif firstF == -1:
+    print("-2")
+else:
+    second_f = itog.find("f")
+    print(second_f + 1)
