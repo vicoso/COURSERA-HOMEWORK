@@ -1,0 +1,9 @@
+s = input()
+firstH = s.find("h")
+s_revers = s[::-1]
+prev_last_h = s_revers.find("h")
+lastH = len(s) - 1 - prev_last_h
+s_1 = s[:firstH]
+s_2 = s[lastH + 1:]
+itog = s_1 + s_2
+print(itog)
