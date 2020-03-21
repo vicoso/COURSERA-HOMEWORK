@@ -1,0 +1,12 @@
+spisok = list(map(int, input().split()))
+a = 0
+for i in spisok:
+    if i > a:
+        a = i
+sp = []
+for index, value in enumerate(spisok):
+    if value == a:
+        sp.append(index)
+index = max(sp)
+print(a)
+print(index)
