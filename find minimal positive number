@@ -1,0 +1,17 @@
+m = list(map(int, input().split()))
+kolvo_nol = 0
+n = []
+for i in range(0, len(m)):
+    if m[i] == 0:
+        kolvo_nol += 1
+if kolvo_nol != 0:
+    print("0")
+else:
+    for i in range(0, len(m)):
+        if m[i] < 0:
+            m[i] = 0
+    for i in range(0, len(m)):
+        if m[i] != 0:
+            n.append(m[i])
+    minim = min(n)
+    print(minim)
