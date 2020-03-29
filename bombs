@@ -1,0 +1,32 @@
+sel = int(input())
+ds = list(enumerate(map(int, input().split())))
+bomb = int(input())
+db = list(enumerate(map(int, input().split())))
+
+
+def sqrtDist(p):
+    return p[1]**2
+
+
+ds.sort(key=sqrtDist)
+db.sort(key=sqrtDist)
+j = 0
+result = []
+for i in range(0, len(ds)):
+    while j + 1 < bomb and abs(ds[i][1] - db[j][1]) > \
+            abs(ds[i][1] - db[j + 1][1]):
+        j += 1
+    else:
+        result.append([ds[i][0], db[j][0]])
+
+
+def voz(n):
+    return n[0]
+
+
+def voz2(y):
+    return str(y[1] + 1)
+
+
+result.sort(key=voz)
+print(" ".join(map(voz2, result)))
