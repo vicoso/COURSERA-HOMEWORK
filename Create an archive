@@ -1,0 +1,23 @@
+n = list(map(int, input().split()))
+memory = n[0]
+people = n[1]
+m = []
+q = []
+i = 0
+while len(m) < people:
+    k = int(input())
+    m.append(k)
+mn = sorted(m)
+if sum(mn) < memory:
+    print(len(mn))
+else:
+
+    while sum(q) < memory:
+        q.append(mn[i])
+        i += 1
+    if sum(q) > memory:
+        q.remove(max(q))
+        qn = q
+        print(len(qn))
+    else:
+        print(len(q))
