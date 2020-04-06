@@ -1,0 +1,8 @@
+a = list(map(int, input().split()))
+a_mnv = set()
+for elem in a:
+    if elem in a_mnv:
+        print("YES")
+    else:
+        print("NO")
+        a_mnv.add(elem)
