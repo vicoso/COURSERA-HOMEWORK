@@ -1,0 +1,20 @@
+students = int(input())
+all_lang = set()
+all_know = set()
+
+for i in range(students):
+    num_lang = int(input())
+    list_lang = []
+    for j in range(num_lang):
+        lang = input()
+        list_lang.append(lang)
+    set_lang = set(list_lang)
+    all_lang = all_lang | set_lang
+    if i == 0:
+        all_know = set_lang
+    else:
+        all_know = all_know & set_lang
+print(len(all_know))
+print(*all_know, sep="\n")
+print(len(all_lang))
+print(*all_lang, sep="\n")
