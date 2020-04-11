@@ -1,0 +1,15 @@
+text = []
+with open('input.txt', 'r') as f:
+    for line in f:
+        for slovo in line.split():
+            text.append(slovo)
+slovar = {}
+for word in text:
+    slovar[word] = slovar.get(word, 0) + 1
+lis = []
+for key, value in slovar.items():
+    a = -1 * value, key
+    lis.append(a)
+lis_sort = sorted(lis)
+for i in range(len(lis_sort)):
+    print(lis_sort[i][1], sep='\n')
